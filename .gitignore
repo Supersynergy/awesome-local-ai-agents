@@ -1,0 +1,94 @@
+# Dependencies
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env
+.venv/
+ENV/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Build outputs
+*.o
+*.so
+*.dylib
+
+# Package files
+*.tar.gz
+*.zip
+*.rar
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Local configuration
+.env.local
+.env.*.local
+config.local.json
+secrets.json
+
+# Model files (can be large)
+*.bin
+*.gguf
+*.safetensors
+models/
+
+# Documentation build
+_build/
+site/
+docs/_build/
+
+# Misc
+*.pid
+*.seed
+*.pid.lock

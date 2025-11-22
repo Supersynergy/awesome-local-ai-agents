@@ -1,406 +1,400 @@
-# 🏠 Awesome Local AI Agents
-
-> **The Ultimate Curated Index of Local AI Agents**
->
-> A comprehensive meta-awesome-list aggregating 500+ local AI agents, frameworks, and self-hosted solutions.
+# Awesome Local AI Agents
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Local First](https://img.shields.io/badge/Local--First-Priority-blue)](https://localfirst.fm/)
-[![Open Source](https://img.shields.io/badge/Open%20Source-100%25-green)]()
-[![Total Agents](https://img.shields.io/badge/Total%20Agents-500+-brightgreen)](#-statistics)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--11--22-brightgreen)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+> A curated collection of local AI agent frameworks, tools, and resources for building autonomous AI systems that run entirely on your own hardware.
+
+## Table of Contents
+
+- [What Are Local AI Agents?](#what-are-local-ai-agents)
+- [Why Local AI Agents Matter](#why-local-ai-agents-matter)
+- [Quick Start Guide](#quick-start-guide)
+- [Agent Frameworks](#agent-frameworks)
+- [Local LLM Tools](#local-llm-tools)
+- [Installation Guides](#installation-guides)
+- [Use Cases](#use-cases)
+- [Community Resources](#community-resources)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-## 📚 Table of Contents
+## What Are Local AI Agents?
 
-- [🎯 What is This?](#-what-is-this)
-- [📊 Statistics](#-statistics)
-- [🗂️ Awesome Lists Index](#-awesome-lists-index)
-- [🔝 Top Local AI Agents](#-top-local-ai-agents)
-- [📂 Categories](#-categories)
-- [🛠️ Frameworks & Tools](#%EF%B8%8F-frameworks--tools)
-- [🔗 Resources](#-resources)
-- [💡 Contributing](#-contributing)
+Local AI agents are autonomous software systems powered by large language models (LLMs) that run entirely on your own hardware without requiring cloud services. These agents can:
 
----
+- **Reason and plan** - Break down complex tasks into manageable steps
+- **Use tools** - Interact with APIs, databases, file systems, and external services
+- **Maintain memory** - Remember context across conversations and sessions
+- **Collaborate** - Work with other agents in multi-agent systems
+- **Execute code** - Write, run, and debug code autonomously
 
-## 🎯 What is This?
+Unlike cloud-based AI services, local agents process all data on your machine, ensuring complete privacy and control over your AI workflows.
 
-This is a **meta-awesome-list** that aggregates and indexes the most comprehensive collections of **local-first AI agents** from across the GitHub community. Focus areas include:
+## Why Local AI Agents Matter
 
-✅ **Privacy-First** - No data leaves your machine
-✅ **Self-Hosted** - Full control of your infrastructure
-✅ **Open Source** - Transparent and auditable
-✅ **Cost-Effective** - No API fees or subscriptions
-✅ **Offline-Capable** - Works without internet
-✅ **Customizable** - Modify and adapt to your needs
+### Privacy and Security
 
----
+- **Data sovereignty** - Your data never leaves your machine
+- **No external APIs** - Sensitive information stays private
+- **Compliance** - Meet GDPR, HIPAA, and other regulatory requirements
+- **Air-gapped operation** - Work in secure environments without internet
 
-## 📊 Statistics
+### Cost Efficiency
 
-| Metric | Value | Source |
-|--------|-------|--------|
-| **Total Local AI Agents** | 500+ | Aggregated Lists |
-| **Awesome Lists** | 6+ | Community Collections |
-| **Framework Options** | 20+ | Different approaches |
-| **Model Support** | 100+ | LLM models supported |
-| **Categories** | 15+ | Use case based |
-| **Active Projects** | 300+ | Maintained/Updated |
+- **No API fees** - Eliminate per-token costs from cloud providers
+- **Unlimited usage** - Run as many queries as your hardware allows
+- **One-time investment** - Hardware costs amortize over time
+- **Predictable expenses** - No surprise bills from heavy usage
 
----
+### Performance and Control
 
-## 🗂️ Awesome Lists Index
+- **Low latency** - No network round-trips
+- **Customization** - Fine-tune models for your specific use cases
+- **Offline capability** - Work without internet connectivity
+- **Full control** - Choose your models, adjust parameters, and own the entire stack
 
-### 🏆 **Primary Collections**
+### Development Benefits
 
-#### 1. **[janhq/awesome-local-ai](https://github.com/janhq/awesome-local-ai)**
-   - **Focus**: Comprehensive local AI tools
-   - **Best For**: Getting started with local AI
-   - **Includes**: Jan AI, Ollama, LocalAI, and more
-   - **Updated**: Actively maintained
-
-#### 2. **[kyrolabs/awesome-agents](https://github.com/kyrolabs/awesome-agents)**
-   - **Agents**: 50+
-   - **Focus**: AI agents and automation
-   - **Features**: Local and self-hosted options
-   - **Best For**: Agent framework comparisons
-
-#### 3. **[slavakurilyak/awesome-ai-agents](https://github.com/slavakurilyak/awesome-ai-agents)**
-   - **Resources**: 300+
-   - **Focus**: Agentic AI resources
-   - **Categories**: Frameworks, tools, resources
-   - **Best For**: Comprehensive agent ecosystem
-
-#### 4. **[jim-schwoebel/awesome_ai_agents](https://github.com/jim-schwoebel/awesome_ai_agents)**
-   - **Resources**: 1,500+
-   - **Scope**: Largest collection
-   - **Coverage**: All AI agent types
-   - **Best For**: Maximum discovery
-
-#### 5. **[e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents)**
-   - **Agents**: AI autonomous agents
-   - **Focus**: Practical implementations
-   - **Best For**: Deployment examples
-
-#### 6. **[Jenqyang/Awesome-AI-Agents](https://github.com/Jenqyang/Awesome-AI-Agents)**
-   - **Agents**: LLM-powered agents
-   - **Focus**: Autonomous systems
-   - **Best For**: Agent patterns and architectures
-
-#### 7. **[ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects)**
-   - **Projects**: 500+ use cases
-   - **Industries**: Healthcare, finance, education, retail
-   - **Best For**: Real-world implementations
-
-### 📦 **Related Collections**
-
-- **[steven2358/awesome-generative-ai](https://github.com/steven2358/awesome-generative-ai)** - Generative AI projects
-- **[mahseema/awesome-ai-tools](https://github.com/mahseema/awesome-ai-tools)** - AI tools directory
-- **[openbestof/awesome-ai](https://github.com/openbestof/awesome-ai)** - Comprehensive AI resources
-- **[thebigbone/opensourceAI](https://github.com/thebigbone/opensourceAI)** - Open source AI projects
+- **Rapid prototyping** - Test ideas without API rate limits
+- **Reproducibility** - Consistent results across environments
+- **Debugging** - Full visibility into agent behavior
+- **Integration** - Seamlessly embed into existing workflows
 
 ---
 
-## 🔝 Top Local AI Agents
+## Quick Start Guide
 
-### 🎯 **Framework Leaders** (by GitHub Stars)
+Get started with local AI agents in under 5 minutes:
 
-| Rank | Framework | Stars | Type | Best For |
-|------|-----------|-------|------|----------|
-| 1 | **Ollama** | 147,994 | Local LLM Runner | Running any open LLM |
-| 2 | **AutoGPT** | 177,350 | Agent Framework | Building autonomous agents |
-| 3 | **LM Studio** | 50,000+ | Local inference UI | User-friendly local models |
-| 4 | **LocalAI** | 25,000+ | OpenAI-compatible API | Drop-in replacement |
-| 5 | **Dify** | 40,000+ | Agent Platform | Low-code agent building |
-| 6 | **CrewAI** | 20,000+ | Multi-agent framework | Agent orchestration |
-| 7 | **LangChain** | 90,000+ | Agent framework | Complex workflows |
-| 8 | **AutoGen** (Microsoft) | 48,077 | Multi-agent platform | Conversation frameworks |
-| 9 | **Jan AI** | 5,000+ | Local AI client | Desktop-first experience |
-| 10 | **Open WebUI** | 30,000+ | Chat interface | Beautiful local chat |
+### 1. Install a Local LLM Runtime
 
-### 🏠 **Pure Local-First Agents**
+The fastest way to get started is with **Ollama**:
 
-#### **Ollama** - Model Runner
-- Download and run LLMs locally (Llama, Mistral, Falcon)
-- Simple CLI and REST API
-- CPU/GPU acceleration
-- GitHub: https://github.com/ollama/ollama
+```bash
+# macOS/Linux
+curl -fsSL https://ollama.com/install.sh | sh
 
-#### **LocalAI** - OpenAI-Compatible API
-- Drop-in OpenAI API replacement
-- Runs models locally with 0 GPU requirements
-- Supports: GGUF, transformers, diffusers
-- Generate: Text, Audio, Video, Images
+# Windows
+# Download from https://ollama.com/download
+```
 
-#### **LM Studio** - Desktop Client
-- Download and run models on desktop
-- Simple UI for local inference
-- Chat interface included
-- No coding required
+### 2. Download a Model
 
-#### **Jan AI** - Local Client
-- Privacy-first local AI client
-- Offline-capable
-- Simple drag-and-drop model installation
-- Multiple model support
+```bash
+# Pull a capable model for agent tasks
+ollama pull llama3.1:8b
 
-#### **Open WebUI** - Local Chat Interface
-- Beautiful ChatGPT-like UI
-- Works with Ollama, LocalAI, OpenAI
-- Open source, self-hosted
-- Full-featured (RAG, function calls, etc.)
+# Or for more advanced reasoning
+ollama pull qwen2.5:14b
+```
 
-### 🤖 **Agent Frameworks** (Local-capable)
+### 3. Install an Agent Framework
 
-#### **AutoGPT**
-- Autonomous agent framework
-- Goal-based execution
-- Tool integration
-- Memory and planning
+```bash
+# Option A: CrewAI (easiest for multi-agent)
+pip install crewai crewai-tools
 
-#### **CrewAI**
-- Multi-agent orchestration
-- Role-based agents
-- Task execution
-- Collaboration framework
+# Option B: LangChain (most flexible)
+pip install langchain langchain-community
 
-#### **Dify**
-- Low-code LLM application platform
-- Visual workflow builder
-- Local deployment support
-- RAG and agent capabilities
+# Option C: AutoGen (Microsoft's framework)
+pip install autogen-agentchat
+```
 
-#### **LangChain**
-- Comprehensive agent framework
-- Tool integration
-- Memory management
-- Multi-step reasoning
+### 4. Create Your First Agent
 
-#### **AutoGen (Microsoft)**
-- Multi-agent conversation framework
-- Group chat support
-- Customizable agents
-- Code execution capability
+```python
+# Example with CrewAI and Ollama
+from crewai import Agent, Task, Crew
+from langchain_ollama import OllamaLLM
+
+# Connect to local Ollama
+llm = OllamaLLM(model="llama3.1:8b")
+
+# Create an agent
+researcher = Agent(
+    role="Research Analyst",
+    goal="Find and summarize information on given topics",
+    backstory="You are an expert researcher with attention to detail",
+    llm=llm,
+    verbose=True
+)
+
+# Define a task
+research_task = Task(
+    description="Research the benefits of local AI agents",
+    expected_output="A summary with key points",
+    agent=researcher
+)
+
+# Run the crew
+crew = Crew(agents=[researcher], tasks=[research_task])
+result = crew.kickoff()
+print(result)
+```
 
 ---
 
-## 📂 Categories
+## Agent Frameworks
 
-### 1. **Local Model Runners** (5+)
-- Ollama - Primary choice
-- LocalAI - API compatible
-- vLLM - High throughput
-- Text-generation-webui - Advanced UI
-- GPT4All - Simple single-file
+A comprehensive list of frameworks for building local AI agents. For detailed information, see [FRAMEWORKS.md](FRAMEWORKS.md).
 
-### 2. **Chat & UI Interfaces** (10+)
-- Open WebUI - Best overall
-- LM Studio UI - Simple
-- Jan AI - Privacy first
-- Gradio interfaces - Custom UIs
-- Streamlit apps - Quick prototypes
+### Tier 1: Production-Ready Frameworks
 
-### 3. **Agent Frameworks** (15+)
-- AutoGPT - Autonomous
-- CrewAI - Multi-agent
-- Dify - Low-code
-- LangChain - Comprehensive
-- AutoGen - Microsoft framework
-- Semantic Kernel
-- LlamaIndex (formerly GPT Index)
-- MemGPT
+| Framework | Stars | Language | Best For | Key Feature |
+|-----------|-------|----------|----------|-------------|
+| [LangChain](https://github.com/langchain-ai/langchain) | 116K+ | Python/JS | Complex workflows | Modular design, extensive integrations |
+| [AutoGen](https://github.com/microsoft/autogen) | 50K+ | Python | Multi-agent systems | Conversational agents, Microsoft backing |
+| [CrewAI](https://github.com/crewAIInc/crewAI) | 38K+ | Python | Team collaboration | Role-based agents, simple API |
+| [LangGraph](https://github.com/langchain-ai/langgraph) | 19K+ | Python | Stateful workflows | Graph-based control flow |
 
-### 4. **RAG Systems** (8+)
-- Llama Index - Document indexing
-- LangChain - Integration library
-- Milvus - Vector database
-- Chroma - Embedding database
-- Vespa - Search and AI
-- Weaviate - Vector storage
+### Tier 2: Specialized Frameworks
 
-### 5. **Multi-Agent Systems** (10+)
-- CrewAI - Team coordination
-- AutoGen - Multi-party chat
-- CAMEL - Large-scale systems
-- SmoolAgent
-- Orchestrating function calls
+| Framework | Stars | Language | Best For | Key Feature |
+|-----------|-------|----------|----------|-------------|
+| [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 170K+ | Python | Autonomous tasks | Self-planning, goal-driven |
+| [Open Interpreter](https://github.com/OpenInterpreter/open-interpreter) | 56K+ | Python | Code execution | Natural language to code |
+| [OpenHands](https://github.com/All-Hands-AI/OpenHands) | 45K+ | Python | Software development | Docker isolation, file editing |
+| [Dify](https://github.com/langgenius/dify) | 55K+ | Python/TS | Visual building | GUI workflow builder |
 
-### 6. **Specialized Agents** (20+)
-- **Code agents**: CodeLlama, Cursor, GitHub Copilot
-- **Data agents**: Pandas-AI, Duck-AI
-- **Research agents**: Perplexity, SciPhi
-- **Planning agents**: PDDL-based
-- **Game agents**: MinAI, ALE agents
+### Tier 3: Emerging Frameworks
 
-### 7. **Model Fine-tuning** (10+)
-- LoRA - Parameter efficient
-- QLoRA - Quantized LoRA
-- Unsloth - Fast fine-tuning
-- Hugging Face Training
-- MLX - Apple Silicon optimization
-
-### 8. **Vector Databases** (8+)
-- Chroma - Lightweight
-- Milvus - Scalable
-- Weaviate - Cloud-native
-- Qdrant - High-performance
-- Pinecone - Managed
-- Supabase (pgvector) - PostgreSQL
-
-### 9. **Memory Systems** (5+)
-- MemGPT - AI memory
-- Mem0 - Persistent memory
-- LTM - Long-term memory
-- Knowledge graphs
-- Vector stores
-
-### 10. **Development Tools** (15+)
-- LangSmith - Agent monitoring
-- Weights & Biases - ML tracking
-- Ollama Web UI
-- OpenWebUI
-- Jupyter Notebooks
-- Docker containers
+| Framework | Stars | Language | Best For | Key Feature |
+|-----------|-------|----------|----------|-------------|
+| [SmolAgents](https://github.com/huggingface/smolagents) | 15K+ | Python | Minimal footprint | ~1000 lines of code |
+| [Agno](https://github.com/agno-agi/agno) | 20K+ | Python | Multimodal agents | Teams of agents |
+| [Pydantic AI](https://github.com/pydantic/pydantic-ai) | 10K+ | Python | Type safety | Validated outputs |
+| [Goose](https://github.com/block/goose) | 8K+ | Python | Extensibility | Block's framework |
+| [Letta](https://github.com/letta-ai/letta) | 12K+ | Python | Persistent memory | Vector database integration |
+| [Flowise](https://github.com/FlowiseAI/Flowise) | 32K+ | TypeScript | Drag-and-drop | Visual node editor |
 
 ---
 
-## 🛠️ Frameworks & Tools
+## Local LLM Tools
 
-### **Language Frameworks**
+Tools for running language models locally. For detailed comparisons, see [LOCAL-LLM-TOOLS.md](LOCAL-LLM-TOOLS.md).
 
-#### Python
-- LangChain
-- AutoGPT
-- CrewAI
-- Dify
-- LlamaIndex
-- AutoGen
-- Semantic Kernel
-- MemGPT
+### Runtime Comparison
 
-#### JavaScript/TypeScript
-- LangChain.js
-- Vercel AI SDK
-- OpenAI Node SDK
-- Anthropic Node SDK
+| Tool | Interface | Ease of Use | Model Support | Best For |
+|------|-----------|-------------|---------------|----------|
+| [Ollama](https://ollama.com) | CLI | Excellent | 100+ models | Developers, automation |
+| [LM Studio](https://lmstudio.ai) | GUI | Excellent | Extensive | Beginners, experimentation |
+| [GPT4All](https://gpt4all.io) | GUI | Very Good | Curated | Privacy-focused users |
+| [Jan](https://jan.ai) | GUI | Very Good | Good | ChatGPT replacement |
+| [LocalAI](https://localai.io) | API | Good | Many formats | OpenAI compatibility |
+| [text-gen-webui](https://github.com/oobabooga/text-generation-webui) | Web | Good | Very flexible | Advanced users |
+| [Haplo AI](https://apps.apple.com/app/haplo-ai) | App | Very Good | Limited | iOS/macOS users |
+| [Msty](https://msty.app) | GUI | Very Good | Good | Desktop users |
 
-#### Go
-- Ollama
-- LocalAI (components)
-- Lantern
+### Recommended Models for Agents
 
-#### Rust
-- ort (ONNX Runtime)
-- Burn
-- Candle
-
-### **Model Sources**
-
-#### Hugging Face
-- Largest model repository
-- 500,000+ models
-- Easy local download
-- GGUF format optimization
-
-#### Ollama Library
-- Curated model collection
-- Pre-configured parameters
-- Performance optimized
-- One-click installation
-
-#### Together AI
-- Open model aggregator
-- Optimized inference
-- API or local download
-
-#### Replicate
-- Model marketplace
-- API focused
-- Fine-tune hub
+| Model | Parameters | RAM Required | Agent Capability | Speed |
+|-------|------------|--------------|------------------|-------|
+| Llama 3.1 8B | 8B | 8GB | Good | Fast |
+| Qwen 2.5 14B | 14B | 16GB | Excellent | Medium |
+| Mistral 7B | 7B | 8GB | Good | Very Fast |
+| DeepSeek V3 | Various | 16GB+ | Excellent | Medium |
+| CodeLlama 13B | 13B | 16GB | Code-focused | Medium |
 
 ---
 
-## 🔗 Resources
+## Installation Guides
+
+### Setting Up Ollama + CrewAI
+
+```bash
+# 1. Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# 2. Start Ollama service
+ollama serve &
+
+# 3. Pull models
+ollama pull llama3.1:8b
+ollama pull nomic-embed-text  # For embeddings
+
+# 4. Create Python environment
+python -m venv agent-env
+source agent-env/bin/activate  # or `agent-env\Scripts\activate` on Windows
+
+# 5. Install CrewAI
+pip install crewai crewai-tools langchain-ollama
+
+# 6. Verify installation
+python -c "from crewai import Agent; print('CrewAI ready!')"
+```
+
+### Setting Up LM Studio + LangChain
+
+```bash
+# 1. Download LM Studio from https://lmstudio.ai
+# 2. Launch and download a model (e.g., Llama 3.1 8B)
+# 3. Start the local server (default: http://localhost:1234)
+
+# 4. Install LangChain
+pip install langchain langchain-openai
+
+# 5. Use with LangChain
+```
+
+```python
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(
+    base_url="http://localhost:1234/v1",
+    api_key="not-needed",
+    model="local-model"
+)
+
+response = llm.invoke("Explain local AI agents")
+print(response.content)
+```
+
+### Setting Up Jan + AutoGen
+
+```bash
+# 1. Download Jan from https://jan.ai
+# 2. Launch and download a model
+# 3. Enable API server in settings (default: http://localhost:1337)
+
+# 4. Install AutoGen
+pip install autogen-agentchat
+
+# 5. Configure AutoGen
+```
+
+```python
+import autogen
+
+config_list = [{
+    "model": "jan-model",
+    "base_url": "http://localhost:1337/v1",
+    "api_key": "not-needed"
+}]
+
+assistant = autogen.AssistantAgent(
+    "assistant",
+    llm_config={"config_list": config_list}
+)
+```
+
+---
+
+## Use Cases
+
+### Software Development
+
+- **Code generation** - Write functions, classes, and entire applications
+- **Code review** - Analyze code for bugs, security issues, and improvements
+- **Documentation** - Generate and update documentation automatically
+- **Testing** - Create unit tests and integration tests
+- **Refactoring** - Improve code structure while preserving functionality
+
+### Research and Analysis
+
+- **Literature review** - Summarize papers and extract key findings
+- **Data analysis** - Process and interpret datasets
+- **Report generation** - Create comprehensive reports from raw data
+- **Competitive analysis** - Research and compare products or companies
+
+### Content Creation
+
+- **Technical writing** - Create tutorials, guides, and documentation
+- **Marketing copy** - Generate product descriptions and ad copy
+- **Translation** - Translate content between languages
+- **Editing** - Proofread and improve existing content
+
+### Automation and Workflows
+
+- **Email processing** - Categorize, summarize, and draft responses
+- **Data entry** - Extract information from documents
+- **Scheduling** - Manage calendars and coordinate meetings
+- **System administration** - Generate scripts and manage infrastructure
+
+### Personal Assistants
+
+- **Note-taking** - Summarize meetings and organize information
+- **Task management** - Plan and track projects
+- **Learning** - Create study materials and explanations
+- **Decision support** - Analyze options and provide recommendations
+
+---
+
+## Community Resources
+
+For an extensive list of community resources, see [AWESOME-LISTS.md](AWESOME-LISTS.md).
 
 ### Official Documentation
-- [Ollama Docs](https://github.com/ollama/ollama)
+
 - [LangChain Docs](https://python.langchain.com/)
-- [Dify Docs](https://docs.dify.ai/)
 - [AutoGen Docs](https://microsoft.github.io/autogen/)
 - [CrewAI Docs](https://docs.crewai.com/)
+- [Ollama Docs](https://github.com/ollama/ollama/blob/main/docs/README.md)
 
 ### Learning Resources
-- **Get Started**: [Jan AI Guide](https://jan.ai/)
-- **Advanced**: [Fast.ai Courses](https://www.fast.ai/)
-- **Research**: [Papers with Code](https://paperswithcode.com/)
 
-### Community
-- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/)
-- [Hugging Face Discord](https://discord.gg/JfAtqmYWIi)
-- [LangChain Community](https://discord.gg/langchain)
-- [Github Discussions](https://github.com/topics/local-ai)
+- [LangChain Academy](https://www.langchain.com/langchain-academy) - Free courses
+- [Hugging Face Course](https://huggingface.co/learn) - AI/ML fundamentals
+- [DeepLearning.AI](https://www.deeplearning.ai/) - Agent courses
 
----
+### Community Forums
 
-## 💡 Contributing
+- [r/LocalLLaMA](https://reddit.com/r/LocalLLaMA) - 534K+ members
+- [LangChain Discord](https://discord.gg/langchain)
+- [Ollama Discord](https://discord.gg/ollama)
 
-### Adding Your Local AI Agent
+### GitHub Awesome Lists
 
-1. **Fork** this repository
-2. **Add** agent to appropriate category
-3. **Include**: Name, description, repo link, key features
-4. **Submit** PR with justification
-
-### Quality Standards
-
-✅ **Required:**
-- Open source code
-- Active development (updated in 2025)
-- Clear documentation
-- Working examples
-
-✅ **Nice to have:**
-- Local/offline support
-- Privacy-first design
-- Minimal dependencies
-- Easy installation
+- [awesome-llm-agents](https://github.com/kaushikb11/awesome-llm-agents)
+- [awesome-agents](https://github.com/kyrolabs/awesome-agents)
+- [awesome-langchain](https://github.com/kyrolabs/awesome-langchain)
 
 ---
 
-## 📈 Growth in 2025
+## Repository Statistics
 
-```
-Q1 2025: 200+ local agents
-Q2 2025: 300+ local agents
-Q3 2025: 400+ local agents
-Q4 2025: 500+ local agents
-```
+This repository covers:
 
-**Key Trend**: Shift from cloud-only to local-first development
-
----
-
-## 📄 License
-
-MIT License - See LICENSE file
+- **15+ Agent Frameworks** - From enterprise-ready to experimental
+- **8+ Local LLM Tools** - Various interfaces and capabilities
+- **10+ Recommended Models** - Tested for agent workflows
+- **5+ Installation Guides** - Step-by-step setup instructions
+- **20+ Use Cases** - Real-world applications
+- **50+ Community Resources** - Awesome lists, tutorials, papers
 
 ---
 
-## 🙏 Acknowledgments
+## Contributing
 
-This meta-index aggregates work from:
-- [janhq](https://github.com/janhq) - awesome-local-ai
-- [kyrolabs](https://github.com/kyrolabs) - awesome-agents
-- [slavakurilyak](https://github.com/slavakurilyak) - awesome-ai-agents
-- [jim-schwoebel](https://github.com/jim-schwoebel) - comprehensive resources
-- [Ollama](https://github.com/ollama/ollama) - Model runner
-- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) - Agent framework
-- [Dify](https://github.com/langgenius/dify) - Agent platform
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- Adding new frameworks or tools
+- Improving documentation
+- Fixing errors
+- Sharing use cases and examples
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-**Made with ❤️ for the local-first AI community**
+## Acknowledgments
 
-**Last Updated**: November 22, 2025
+Thanks to all the developers and researchers building the local AI ecosystem:
+
+- The LangChain team for pioneering modular agent design
+- Microsoft for AutoGen and pushing multi-agent research
+- The CrewAI team for simplifying agent collaboration
+- Ollama for making local LLM deployment accessible
+- The r/LocalLLaMA community for continuous testing and feedback
+
+---
+
+**Star this repo** if you find it useful! Your support helps others discover these resources.
+
+[Report an Issue](https://github.com/your-username/awesome-local-ai-agents/issues) | [Request a Feature](https://github.com/your-username/awesome-local-ai-agents/issues/new)
