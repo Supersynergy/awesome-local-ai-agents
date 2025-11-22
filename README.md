@@ -165,11 +165,14 @@ A comprehensive list of frameworks for building local AI agents. For detailed in
 | Framework | Stars | Language | Best For | Key Feature |
 |-----------|-------|----------|----------|-------------|
 | [SmolAgents](https://github.com/huggingface/smolagents) | 15K+ | Python | Minimal footprint | ~1000 lines of code |
-| [Agno](https://github.com/agno-agi/agno) | 20K+ | Python | Multimodal agents | Teams of agents |
+| [Agno](https://github.com/agno-agi/agno) | 35.4K+ | Python | Multimodal agents | Runtime and control plane |
 | [Pydantic AI](https://github.com/pydantic/pydantic-ai) | 10K+ | Python | Type safety | Validated outputs |
 | [Goose](https://github.com/block/goose) | 8K+ | Python | Extensibility | Block's framework |
 | [Letta](https://github.com/letta-ai/letta) | 12K+ | Python | Persistent memory | Vector database integration |
 | [Flowise](https://github.com/FlowiseAI/Flowise) | 32K+ | TypeScript | Drag-and-drop | Visual node editor |
+| [Composio](https://github.com/composio/composio) | 26.2K+ | Python | Tool integrations | 100+ integrations, MCP support |
+| [Daytona](https://github.com/daytonaio/daytona) | 32.3K+ | Go | Secure execution | Elastic AI code infrastructure |
+| [FastGPT](https://github.com/labring/FastGPT) | 25.5K+ | TypeScript | Visual building | AI agent platform |
 
 ---
 
@@ -349,9 +352,43 @@ For an extensive list of community resources, see [AWESOME-LISTS.md](AWESOME-LIS
 
 ### GitHub Awesome Lists
 
+- [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) - 24.2K stars
+- [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) - 16.3K stars
 - [awesome-llm-agents](https://github.com/kaushikb11/awesome-llm-agents)
 - [awesome-agents](https://github.com/kyrolabs/awesome-agents)
 - [awesome-langchain](https://github.com/kyrolabs/awesome-langchain)
+
+---
+
+## November 2025 Updates
+
+### What's New
+
+This repository has been updated with the latest discoveries from November 2025:
+
+#### New Frameworks Added
+- **Composio** (26.2K stars) - 100+ integrations via function calling
+- **Agno v2.0** (35.4K stars) - Multi-agent runtime and control plane
+- **Daytona** (32.3K stars) - Secure AI code execution infrastructure
+- **Parlant** (16.3K stars) - Control-first LLM agents
+- **FastGPT** (25.5K stars) - Visual AI agent building platform
+- **16+ additional frameworks** - See [FRAMEWORKS.md](FRAMEWORKS.md)
+
+#### Latest Models
+- **Llama 4** (Meta) - Natively multimodal Scout/Maverick variants
+- **Qwen3 Series** - Including Qwen3-Coder-480B for agentic coding
+- **DeepSeek V3.2/R1** - Advanced reasoning capabilities
+- **GPT-OSS** - OpenAI's first open-source release
+- Complete guide: [LATEST-MODELS-2025.md](LATEST-MODELS-2025.md)
+
+#### New Awesome Lists
+- [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) - 24.2K stars
+- [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) - 16.3K stars
+- **8 additional curated lists** - See [AWESOME-LISTS.md](AWESOME-LISTS.md)
+
+#### New Resources
+- [LATEST-MODELS-2025.md](LATEST-MODELS-2025.md) - Comprehensive model running guide
+- [COMMUNITY-PROJECTS.md](COMMUNITY-PROJECTS.md) - Real-world implementations
 
 ---
 
@@ -359,12 +396,13 @@ For an extensive list of community resources, see [AWESOME-LISTS.md](AWESOME-LIS
 
 This repository covers:
 
-- **15+ Agent Frameworks** - From enterprise-ready to experimental
+- **30+ Agent Frameworks** - From enterprise-ready to experimental (including 16 new November 2025 additions)
 - **8+ Local LLM Tools** - Various interfaces and capabilities
-- **10+ Recommended Models** - Tested for agent workflows
+- **20+ Latest Models** - Including November 2025 releases
 - **5+ Installation Guides** - Step-by-step setup instructions
 - **20+ Use Cases** - Real-world applications
-- **50+ Community Resources** - Awesome lists, tutorials, papers
+- **15+ Awesome Lists** - Curated community collections
+- **60+ Community Resources** - Tutorials, papers, and projects
 
 ---
 

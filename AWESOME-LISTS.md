@@ -22,11 +22,17 @@ A curated collection of awesome lists, repositories, learning resources, and com
 
 | Repository | Stars | Description |
 |------------|-------|-------------|
-| [awesome-llm-agents](https://github.com/kaushikb11/awesome-llm-agents) | 3K+ | Curated list of LLM-powered autonomous agents |
-| [awesome-agents](https://github.com/kyrolabs/awesome-agents) | 2K+ | Collection of AI agent projects and resources |
-| [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) | 5K+ | List of AI agents by e2b |
+| [awesome-llm-agents](https://github.com/kaushikb11/awesome-llm-agents) | 2K+ | Curated LLM frameworks and agent development tools |
+| [awesome-agents](https://github.com/kyrolabs/awesome-agents) | 2K+ | Awesome list of AI Agents with 100+ projects |
+| [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) | 24.2K+ | Comprehensive list of AI agents by E2B |
 | [awesome-langchain](https://github.com/kyrolabs/awesome-langchain) | 7K+ | LangChain ecosystem resources |
-| [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 10K+ | LLM application examples |
+| [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 10K+ | Awesome LLM apps with RAG, AI Agents, Multi-agent Teams |
+| [Awesome-AI-Agents](https://github.com/ChatTeach/Awesome-AI-Agents) | 1K+ | Weekly updated curated collection |
+| [Awesome-AI-Agents](https://github.com/Jenqyang/Awesome-AI-Agents) | 1K+ | Collection of autonomous agents |
+| [awesome-ai-agent-frameworks](https://github.com/axioma-ai-labs/awesome-ai-agent-frameworks) | 500+ | Battle-tested frameworks |
+| [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 16.3K+ | 500+ AI agent use cases |
+| [awesome_ai_agents](https://github.com/jim-schwoebel/awesome_ai_agents) | 1K+ | Hundreds of AI agent types |
+| [Awesome-AI-Market-Maps](https://github.com/joylarkin/Awesome-AI-Market-Maps) | 500+ | 300+ AI Market Maps from 2025 |
 
 ### Local LLM Lists
 
@@ -316,4 +322,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-Last Updated: 2025
+Last Updated: November 2025

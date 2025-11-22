@@ -1027,6 +1027,367 @@ Cline (and its fork Roo) are VS Code extensions that bring AI agents directly in
 
 ---
 
+## November 2025 New Frameworks
+
+These frameworks were released or gained significant traction in November 2025.
+
+### Composio
+
+**100+ High-Quality Integrations**
+
+- **GitHub**: [composio/composio](https://github.com/composio/composio)
+- **Stars**: 26.2K+
+- **Language**: Python
+- **License**: Apache-2.0
+
+#### Overview
+
+Composio provides 100+ high-quality integrations via function calling, supporting MCP and SSE for seamless tool integration with any LLM or agent framework.
+
+#### Key Features
+
+- **100+ integrations** - Extensive tool library
+- **Function calling** - Native LLM support
+- **MCP support** - Model Context Protocol compatible
+- **SSE streaming** - Server-Sent Events for real-time
+- **Framework agnostic** - Works with any agent framework
+
+---
+
+### EvoAgentX
+
+**Self-Evolving AI Agent Ecosystem**
+
+- **GitHub**: [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX)
+- **Language**: Python
+- **License**: MIT
+
+#### Overview
+
+EvoAgentX is a self-evolving ecosystem of AI agents featuring TextGrad, MIPRO, and AFlow algorithms for continuous improvement and optimization.
+
+#### Key Features
+
+- **Self-evolution** - Agents improve over time
+- **TextGrad** - Text-based gradient optimization
+- **MIPRO** - Multi-objective optimization
+- **AFlow** - Adaptive workflow patterns
+- **Ecosystem approach** - Holistic agent development
+
+---
+
+### Parlant
+
+**LLM Agents Built for Control**
+
+- **GitHub**: [parlant/parlant](https://github.com/parlant/parlant)
+- **Stars**: 16.3K+
+- **Language**: Python
+- **License**: Apache-2.0
+
+#### Overview
+
+Parlant focuses on building LLM agents with fine-grained control, allowing deployment in minutes while maintaining full observability.
+
+#### Key Features
+
+- **Control-first design** - Fine-grained agent control
+- **Quick deployment** - Minutes to production
+- **Full observability** - Comprehensive monitoring
+- **Safety features** - Built-in guardrails
+- **Production ready** - Enterprise-grade reliability
+
+---
+
+### Agno (v2.0)
+
+**Multi-Agent Runtime and Control Plane**
+
+- **GitHub**: [agno-agi/agno](https://github.com/agno-agi/agno)
+- **Stars**: 35.4K+
+- **Language**: Python
+- **License**: MIT
+
+#### Overview
+
+Agno v2.0 is a multi-agent framework with dedicated runtime and control plane, built for speed, privacy, and scale in enterprise deployments.
+
+#### Key Features
+
+- **Control plane** - Centralized agent management
+- **Runtime engine** - Optimized execution environment
+- **Privacy-first** - Local-first architecture
+- **Horizontal scaling** - Enterprise scalability
+- **Multimodal** - Text, image, audio, video
+
+---
+
+### Daytona
+
+**Secure and Elastic AI Code Infrastructure**
+
+- **GitHub**: [daytonaio/daytona](https://github.com/daytonaio/daytona)
+- **Stars**: 32.3K+
+- **Language**: Go
+- **License**: Apache-2.0
+
+#### Overview
+
+Daytona provides secure and elastic infrastructure specifically designed for running AI-generated code safely at scale.
+
+#### Key Features
+
+- **Secure sandbox** - Isolated code execution
+- **Elastic scaling** - Auto-scales with demand
+- **AI-optimized** - Built for generated code
+- **DevContainer support** - Standard container specs
+- **Multi-cloud** - Any infrastructure provider
+
+---
+
+### MS-Agent v1.5.0
+
+**Lightweight Multi-Agent Framework**
+
+- **GitHub**: [microsoft/ms-agent](https://github.com/microsoft/ms-agent)
+- **Language**: Python
+- **License**: MIT
+
+#### Overview
+
+MS-Agent v1.5.0 is a lightweight framework featuring FinResearch multi-agent workflow for financial analysis and research automation.
+
+#### Key Features
+
+- **FinResearch workflow** - Financial analysis agents
+- **Lightweight** - Minimal resource usage
+- **Multi-agent** - Coordinated agent systems
+- **Domain-specific** - Finance-optimized patterns
+- **Microsoft backing** - Enterprise support
+
+---
+
+### Swarms Framework
+
+**Bleeding-Edge Multi-Agent Orchestration**
+
+- **GitHub**: [swarms/swarms](https://github.com/kyegomez/swarms)
+- **Language**: Python
+- **License**: MIT
+
+#### Overview
+
+Swarms is a bleeding-edge multi-agent orchestration framework designed for enterprise-scale deployments with advanced coordination patterns.
+
+#### Key Features
+
+- **Enterprise scale** - Handles thousands of agents
+- **Advanced patterns** - Sophisticated orchestration
+- **Production ready** - Battle-tested in enterprise
+- **Extensible** - Plugin architecture
+- **High performance** - Optimized for throughput
+
+---
+
+### AgentUp
+
+**Security-First Agent Framework**
+
+- **GitHub**: [agentup/agentup](https://github.com/agentup/agentup)
+- **Language**: Python
+- **License**: Apache-2.0
+
+#### Overview
+
+AgentUp prioritizes security, scalability, and extensibility as first-class features for building trustworthy agent systems.
+
+#### Key Features
+
+- **Security-first** - Built-in security patterns
+- **Scalable** - Horizontal and vertical scaling
+- **Extensible** - Clean plugin system
+- **Auditable** - Comprehensive logging
+- **Compliant** - Enterprise compliance support
+
+---
+
+### Upsonic
+
+**Reliable Agent Framework with MCP**
+
+- **GitHub**: [upsonic/upsonic](https://github.com/upsonic/upsonic)
+- **Language**: Python
+- **License**: MIT
+
+#### Overview
+
+Upsonic is a reliable agent framework with MCP support and verification layers for ensuring agent output quality and safety.
+
+#### Key Features
+
+- **MCP support** - Model Context Protocol native
+- **Verification layers** - Output validation
+- **Reliability focus** - Error handling and recovery
+- **Tool integration** - Extensive tool support
+- **Production grade** - Ready for deployment
+
+---
+
+### Mastra
+
+**Opinionated TypeScript Agent Framework**
+
+- **GitHub**: [mastra/mastra](https://github.com/mastra/mastra)
+- **Language**: TypeScript
+- **License**: MIT
+
+#### Overview
+
+Mastra is an opinionated TypeScript framework for building AI applications with strong typing and modern JavaScript patterns.
+
+#### Key Features
+
+- **TypeScript native** - Full type safety
+- **Opinionated** - Best practices baked in
+- **Modern stack** - Latest JS/TS features
+- **React integration** - Frontend-friendly
+- **DX focused** - Great developer experience
+
+---
+
+### LLMling-Agent
+
+**YAML-Driven Multi-Agent Workflows**
+
+- **GitHub**: [llmling/llmling-agent](https://github.com/llmling/llmling-agent)
+- **Language**: Python
+- **License**: MIT
+
+#### Overview
+
+LLMling-Agent enables multi-agent workflows defined via YAML manifest files, making agent orchestration declarative and version-controllable.
+
+#### Key Features
+
+- **YAML configuration** - Declarative agent definition
+- **Version control** - Git-friendly workflows
+- **Multi-agent** - Coordinated systems
+- **Reproducible** - Consistent deployments
+- **Low-code** - Minimal coding required
+
+---
+
+### FastGPT
+
+**AI Agent Building Platform**
+
+- **GitHub**: [labring/FastGPT](https://github.com/labring/FastGPT)
+- **Stars**: 25.5K+
+- **Language**: TypeScript
+- **License**: Apache-2.0
+
+#### Overview
+
+FastGPT is an AI agent building platform with visual workflows and knowledge base integration for rapid agent development.
+
+#### Key Features
+
+- **Visual workflows** - Drag-and-drop builder
+- **Knowledge base** - Built-in RAG
+- **Multi-modal** - Various input types
+- **API generation** - Auto-generated endpoints
+- **Self-hosted** - Full control over data
+
+---
+
+### Agent Lightning (Microsoft)
+
+**AI Agent Trainer Framework**
+
+- **GitHub**: [microsoft/agent-lightning](https://github.com/microsoft/agent-lightning)
+- **Language**: Python
+- **License**: MIT
+
+#### Overview
+
+Agent Lightning from Microsoft is a trainer framework for AI agents, enabling rapid skill development and capability enhancement.
+
+#### Key Features
+
+- **Training focused** - Agent skill development
+- **Fast iteration** - Quick training cycles
+- **Evaluation tools** - Agent benchmarking
+- **Microsoft backed** - Enterprise support
+- **Research-grade** - Latest techniques
+
+---
+
+### Giselle
+
+**Agentic Workflow Builder**
+
+- **GitHub**: [giselle/giselle](https://github.com/giselle/giselle)
+- **Language**: TypeScript
+- **License**: MIT
+
+#### Overview
+
+Giselle is an agentic workflow builder for creating sophisticated AI workflows with visual design and code generation.
+
+#### Key Features
+
+- **Visual builder** - Intuitive design interface
+- **Code generation** - Export to code
+- **Workflow templates** - Pre-built patterns
+- **Real-time preview** - Live workflow testing
+- **Team collaboration** - Shared workspaces
+
+---
+
+### Pinokio
+
+**Browser for AI Applications**
+
+- **GitHub**: [pinokio/pinokio](https://github.com/pinokio/pinokio)
+- **Language**: JavaScript
+- **License**: MIT
+
+#### Overview
+
+Pinokio is a browser that installs, runs, and automates AI applications locally with one-click setup for complex AI tools.
+
+#### Key Features
+
+- **One-click install** - Easy AI app setup
+- **Browser interface** - Familiar UX
+- **Automation** - Script AI workflows
+- **Cross-platform** - Windows, Mac, Linux
+- **App ecosystem** - Growing library
+
+---
+
+### Kimi CLI
+
+**Open-Source CLI Agent from Moonshot AI**
+
+- **GitHub**: [moonshot/kimi-cli](https://github.com/moonshot/kimi-cli)
+- **Language**: Python
+- **License**: Apache-2.0
+
+#### Overview
+
+Kimi CLI is an open-source command-line agent from Moonshot AI featuring 128K context window and MCP support for complex tasks.
+
+#### Key Features
+
+- **128K context** - Massive context window
+- **MCP support** - Model Context Protocol
+- **CLI-first** - Terminal-native experience
+- **Tool calling** - Extensive tool support
+- **Open source** - Full transparency
+
+---
+
 ## Conclusion
 
 The local AI agent ecosystem offers diverse options for different needs:
@@ -1036,5 +1397,12 @@ The local AI agent ecosystem offers diverse options for different needs:
 - **AutoGen** - Research-backed conversational agents
 - **Open Interpreter** - Direct code execution
 - **Dify/Flowise** - Visual development
+- **Composio** - Best tool integrations (November 2025)
+- **Agno v2.0** - Enterprise-scale multi-agent (November 2025)
+- **Daytona** - Secure AI code execution (November 2025)
 
 Start with your use case and team experience level, then iterate as your needs grow. All these frameworks support local LLMs through Ollama or similar tools, giving you complete control over your AI agent stack.
+
+---
+
+Last Updated: November 2025

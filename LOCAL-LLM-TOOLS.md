@@ -806,6 +806,102 @@ docker run --gpus all -p 8080:8080 \
 
 ---
 
+---
+
+## November 2025 Model Releases
+
+### Latest Flagship Models
+
+| Model | Provider | Release | Key Features | Parameters |
+|-------|----------|---------|--------------|------------|
+| Llama 4 Scout/Maverick | Meta | Nov 2025 | Natively multimodal, advanced reasoning | 8B-405B |
+| Qwen3-Next/Omni | Alibaba | Nov 2025 | Next-gen architecture, omni-modal | Various |
+| Qwen3-Coder-480B | Alibaba | Nov 2025 | Agentic coding, massive scale | 480B |
+| DeepSeek V3.2-Exp | DeepSeek | Nov 2025 | Latest experimental improvements | Various |
+| DeepSeek R1 | DeepSeek | Nov 2025 | Advanced reasoning, CoT | Various |
+| GPT-OSS | OpenAI | Nov 2025 | First open-source from OpenAI | Various |
+| Gemini 3 | Google | Nov 2025 | Next-gen multimodal | Various |
+| Grok 3/4 | xAI | Nov 2025 | Latest Grok iterations | Various |
+| Claude 4 | Anthropic | Nov 2025 | Advanced reasoning and safety | Various |
+| Phi 4 | Microsoft | Nov 2025 | Small but powerful | 3-14B |
+
+### Running Latest Models Locally
+
+#### Llama 4 with Ollama
+
+```bash
+# Pull Llama 4 Scout (efficient variant)
+ollama pull llama4:scout
+
+# Pull Llama 4 Maverick (advanced variant)
+ollama pull llama4:maverick
+
+# Run with multimodal support
+ollama run llama4:scout --verbose
+```
+
+#### Qwen3 Series
+
+```bash
+# Qwen3 base models
+ollama pull qwen3:7b
+ollama pull qwen3:14b
+ollama pull qwen3:32b
+
+# Qwen3-Coder for agentic coding
+ollama pull qwen3-coder:14b
+```
+
+#### DeepSeek Latest
+
+```bash
+# DeepSeek V3.2 experimental
+ollama pull deepseek-v3.2:latest
+
+# DeepSeek R1 for reasoning
+ollama pull deepseek-r1:latest
+```
+
+---
+
+## November 2025 Tool Updates
+
+### Ollama 2.x Improvements
+
+The latest Ollama releases bring significant enhancements:
+
+- **Improved vision support** - Better multimodal handling
+- **Faster downloads** - Optimized model pulling
+- **Enhanced API** - New endpoints for advanced features
+- **Memory optimization** - Better RAM management
+- **Multi-GPU** - Improved distribution across GPUs
+
+### LM Studio 2.0 Features
+
+- **Model comparison** - Side-by-side model testing
+- **Batch inference** - Process multiple prompts
+- **Advanced presets** - Save complex configurations
+- **Integration hub** - Connect to external tools
+- **Performance profiling** - Detailed benchmarks
+
+### Jan Improvements
+
+- **Plugin ecosystem** - Growing extension library
+- **Improved stability** - Better memory management
+- **Enhanced API** - Full OpenAI compatibility
+- **Model recommendations** - Smart model suggestions
+- **Team features** - Shared workspaces (beta)
+
+### LocalAI Enhancements
+
+- **Faster startup** - Reduced initialization time
+- **New backends** - Additional model format support
+- **GPU detection** - Automatic optimal configuration
+- **Metrics dashboard** - Built-in monitoring
+- **Cluster mode** - Distributed inference
+
+---
+
 ## Conclusion
 
 For most users, we recommend:
@@ -818,3 +914,7 @@ For most users, we recommend:
 Start with Ollama if you're comfortable with command line, or LM Studio if you prefer a visual interface. Both provide excellent performance and are well-maintained.
 
 Remember to choose models based on your hardware - a well-optimized 7B model often outperforms a poorly-running 70B model!
+
+---
+
+Last Updated: November 2025
