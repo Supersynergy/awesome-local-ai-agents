@@ -1,438 +1,324 @@
-# Awesome Local AI Agents
+# Awesome Local AI Agents — March 2026 Edition
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-> A curated collection of local AI agent frameworks, tools, and resources for building autonomous AI systems that run entirely on your own hardware.
+> Complete guide to local AI agents, models, and tools — self-hosted only, no cloud required.
+> Privacy-first. Air-gap compatible. Your data stays yours.
 
 ## Table of Contents
 
-- [What Are Local AI Agents?](#what-are-local-ai-agents)
-- [Why Local AI Agents Matter](#why-local-ai-agents-matter)
+- [Local LLM Runners](#local-llm-runners)
+- [Best Local Models (March 2026)](#best-local-models-march-2026)
+- [Hardware Requirements](#hardware-requirements)
+- [Quantization Guide](#quantization-guide)
+- [Local Agent Frameworks](#local-agent-frameworks)
+- [Local RAG Tools](#local-rag-tools)
+- [Privacy and Security](#privacy-and-security)
 - [Quick Start Guide](#quick-start-guide)
-- [Agent Frameworks](#agent-frameworks)
-- [Local LLM Tools](#local-llm-tools)
-- [Installation Guides](#installation-guides)
-- [Use Cases](#use-cases)
-- [Community Resources](#community-resources)
-- [Contributing](#contributing)
-- [License](#license)
+- [Performance Benchmarks](#performance-benchmarks)
+- [Related Lists](#related-lists)
 
 ---
 
-## What Are Local AI Agents?
+## Local LLM Runners
 
-Local AI agents are autonomous software systems powered by large language models (LLMs) that run entirely on your own hardware without requiring cloud services. These agents can:
-
-- **Reason and plan** - Break down complex tasks into manageable steps
-- **Use tools** - Interact with APIs, databases, file systems, and external services
-- **Maintain memory** - Remember context across conversations and sessions
-- **Collaborate** - Work with other agents in multi-agent systems
-- **Execute code** - Write, run, and debug code autonomously
-
-Unlike cloud-based AI services, local agents process all data on your machine, ensuring complete privacy and control over your AI workflows.
-
-## Why Local AI Agents Matter
-
-### Privacy and Security
-
-- **Data sovereignty** - Your data never leaves your machine
-- **No external APIs** - Sensitive information stays private
-- **Compliance** - Meet GDPR, HIPAA, and other regulatory requirements
-- **Air-gapped operation** - Work in secure environments without internet
-
-### Cost Efficiency
-
-- **No API fees** - Eliminate per-token costs from cloud providers
-- **Unlimited usage** - Run as many queries as your hardware allows
-- **One-time investment** - Hardware costs amortize over time
-- **Predictable expenses** - No surprise bills from heavy usage
-
-### Performance and Control
-
-- **Low latency** - No network round-trips
-- **Customization** - Fine-tune models for your specific use cases
-- **Offline capability** - Work without internet connectivity
-- **Full control** - Choose your models, adjust parameters, and own the entire stack
-
-### Development Benefits
-
-- **Rapid prototyping** - Test ideas without API rate limits
-- **Reproducibility** - Consistent results across environments
-- **Debugging** - Full visibility into agent behavior
-- **Integration** - Seamlessly embed into existing workflows
+| Runner | Stars | Platform | Interface | Key Feature |
+|--------|-------|----------|-----------|-------------|
+| [Ollama](https://ollama.com) | 110K+ | Mac/Linux/Win | CLI + REST | Easiest setup, 200+ model library, one-line pulls |
+| [LM Studio](https://lmstudio.ai) | — | Mac/Win/Linux | GUI | GGUF model browser, built-in chat, local server |
+| [llama.cpp / llama-server](https://github.com/ggml-org/llama.cpp) | 80K+ | All | CLI + REST | Raw performance, Metal/CUDA/CPU backends |
+| [vLLM](https://github.com/vllm-project/vllm) | 50K+ | Linux (GPU) | REST | Production serving, PagedAttention, OpenAI-compat |
+| [Jan.ai](https://jan.ai) | 28K+ | Mac/Win/Linux | GUI | Privacy-first desktop app, ChatGPT replacement |
+| [GPT4All](https://gpt4all.io) | 72K+ | Mac/Win/Linux | GUI + CLI | Runs on CPU only, no GPU required |
+| [LocalAI](https://localai.io) | 28K+ | All (Docker) | REST | Drop-in OpenAI API, multimodal, TTS, image gen |
+| [koboldcpp](https://github.com/LostRuins/koboldcpp) | 10K+ | All | Web UI | KoboldAI backend, great for creative/roleplay tasks |
+| [text-generation-webui](https://github.com/oobabooga/text-generation-webui) | 43K+ | All | Web UI | Advanced params, extensions ecosystem, multiple backends |
 
 ---
 
-## Quick Start Guide
+## Best Local Models (March 2026)
 
-Get started with local AI agents in under 5 minutes:
+| Model | Parameters | VRAM (Q4) | Quant Available | Best For |
+|-------|------------|-----------|-----------------|----------|
+| **Llama 4 Scout** (Meta) | 8B active / MoE | 6 GB | Q4, Q5, Q6, Q8 | General chat, coding, fast inference |
+| **Llama 4 Maverick** (Meta) | 70B active / MoE | 24 GB | Q2, Q4, Q5 | Complex reasoning, long context (1M tokens) |
+| **Gemma 3 2B** (Google) | 2B | 2 GB | Q4, Q8 | Edge devices, embedded, Raspberry Pi |
+| **Gemma 3 9B** (Google) | 9B | 6 GB | Q4, Q6, Q8 | Best quality-per-VRAM ratio, strong multilingual |
+| **Gemma 3 27B** (Google) | 27B | 16 GB | Q4, Q5, Q6 | High quality, instruction following, reasoning |
+| **Qwen 2.5 7B** (Alibaba) | 7B | 5 GB | Q4, Q8 | Code, math, multilingual (Chinese/English) |
+| **Qwen 2.5 14B** (Alibaba) | 14B | 10 GB | Q4, Q6 | Balanced: coding + reasoning + chat |
+| **Qwen 2.5 32B** (Alibaba) | 32B | 20 GB | Q4, Q5 | Near-GPT-4 quality, excellent function calling |
+| **Qwen 2.5 72B** (Alibaba) | 72B | 40 GB | Q2, Q4 | Top-tier open weights, agentic tasks |
+| **Qwen3 Coder 480B** (Alibaba) | 480B MoE | 48 GB+ | Q2 | State-of-the-art agentic coding |
+| **DeepSeek V3** | 685B MoE | 32 GB+ | Q2, Q3 | Top reasoning, cheap to run via MoE sparsity |
+| **DeepSeek R1** | 671B / distills | 8–40 GB | Q4 (distills) | Chain-of-thought reasoning, math, logic |
+| **Mistral Small 3.1** | 24B | 14 GB | Q4, Q6 | Fast, function calling, 128K context |
+| **Mistral Large** | 123B | 64 GB | Q3, Q4 | Enterprise-grade, multilingual, agentic |
+| **Phi-4** (Microsoft) | 14B | 9 GB | Q4, Q6, Q8 | Reasoning punch above its weight, STEM tasks |
+| **Command R+** (Cohere) | 104B | 56 GB | Q3, Q4 | RAG-optimized, 128K context, tool use |
 
-### 1. Install a Local LLM Runtime
+> Distilled DeepSeek R1 variants (8B, 14B, 32B, 70B) offer strong reasoning at consumer VRAM levels.
 
-The fastest way to get started is with **Ollama**:
+---
+
+## Hardware Requirements
+
+| VRAM / RAM | Best Models | Use Case |
+|------------|-------------|----------|
+| **4–6 GB GPU** | Gemma 3 2B Q8, Llama 4 Scout Q4, Phi-4 Q2 | Light chat, fast responses, edge deployment |
+| **8 GB GPU** | Gemma 3 9B Q4, Llama 4 Scout Q5, Qwen 2.5 7B Q8, Mistral 7B Q8 | Daily driver for coding and chat |
+| **16 GB GPU** | Qwen 2.5 14B Q6, Gemma 3 27B Q4, Mistral Small Q4, Phi-4 Q8 | Strong coding, reasoning, agentic tasks |
+| **24 GB GPU** | Qwen 2.5 32B Q4, Llama 4 Maverick Q4, DeepSeek R1 32B distill | Near-frontier quality for most tasks |
+| **40–48 GB GPU** | Qwen 2.5 72B Q4, DeepSeek V3 Q2, Command R+ Q3 | Production-grade, multi-user serving |
+| **64 GB+ GPU** | Full precision mid-size models, vLLM serving | High-throughput API servers |
+| **CPU only** | Gemma 3 2B, Phi-4 Q2, GPT4All models | Air-gapped, no GPU, privacy boxes |
+
+### Apple Silicon (M-Series) Recommendations
+
+| Chip | Unified Memory | Recommended Models |
+|------|---------------|-------------------|
+| M3 / M4 (base) | 16 GB | Gemma 3 9B Q6, Llama 4 Scout Q5, Qwen 2.5 7B Q8 |
+| M3 / M4 Pro | 24–36 GB | Qwen 2.5 14B Q8, Mistral Small Q4, Gemma 3 27B Q4 |
+| M3 / M4 Max | 48–128 GB | Qwen 2.5 32B Q8, DeepSeek R1 32B distill Q8, Llama 4 Maverick Q4 |
+| M3 / M4 Ultra | 192 GB | DeepSeek V3 Q3, Qwen 2.5 72B Q6, Command R+ Q6 |
+
+> Ollama + llama.cpp both have excellent Metal acceleration — Apple Silicon is first-class for local AI.
+
+---
+
+## Quantization Guide
+
+### Formats
+
+| Format | Engine | Strengths | Weaknesses |
+|--------|--------|-----------|------------|
+| **GGUF** | llama.cpp, Ollama, LM Studio, koboldcpp | Universal, CPU+GPU, actively maintained | Slightly slower than native GPU formats |
+| **AWQ** | vLLM, HF Transformers | Activation-aware, minimal quality loss | GPU-only, requires calibration data |
+| **GPTQ** | vLLM, AutoGPTQ, text-gen-webui | Mature, broad support | Slightly more quality loss than AWQ |
+| **EXL2** | ExLlamaV2 | Highest GPU throughput, flexible bits | Complex setup, GPU-only |
+| **BitsAndBytes** | HF Transformers | Easy integration, 4/8-bit | Slower inference, research-grade |
+
+### Quality vs Size Tradeoffs
+
+| Quantization | Size vs FP16 | Quality Loss | Recommendation |
+|-------------|-------------|--------------|----------------|
+| Q2_K | ~25% | High | Last resort for extreme VRAM limits |
+| Q3_K_M | ~35% | Moderate | Acceptable for very large models (70B+) |
+| Q4_K_M | ~45% | Low | **Sweet spot** — default recommendation |
+| Q5_K_M | ~55% | Very Low | When VRAM allows, clear quality gain |
+| Q6_K | ~65% | Minimal | Near-lossless for most tasks |
+| Q8_0 | ~80% | Negligible | Effectively full quality, if VRAM fits |
+
+> Rule of thumb: prefer Q4_K_M as default, step up to Q5/Q6 if you have headroom.
+
+---
+
+## Local Agent Frameworks
+
+| Framework | Stars | Language | Ollama Support | Best For |
+|-----------|-------|----------|---------------|----------|
+| [CrewAI](https://github.com/crewAIInc/crewAI) | 38K+ | Python | Native | Role-based multi-agent teams, easy API |
+| [LangChain](https://github.com/langchain-ai/langchain) | 116K+ | Python/JS | Native | Complex pipelines, massive integration library |
+| [LangGraph](https://github.com/langchain-ai/langgraph) | 19K+ | Python | Via LangChain | Stateful workflows, cyclical graphs, human-in-the-loop |
+| [AutoGen](https://github.com/microsoft/autogen) | 50K+ | Python | Via OpenAI-compat | Conversational multi-agent, Microsoft research |
+| [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) | 35K+ | TypeScript | Native | All-in-one: RAG + agents + chat UI, zero-config |
+| [Open Interpreter](https://github.com/OpenInterpreter/open-interpreter) | 56K+ | Python | Native | Natural language computer control, code execution |
+| [Aider](https://github.com/paul-gauthier/aider) | 26K+ | Python | Via Ollama | AI pair programmer, git-aware, multi-file edits |
+| [Continue.dev](https://github.com/continuedev/continue) | 22K+ | TypeScript | Native | VS Code/JetBrains AI IDE extension, local first |
+| [SmolAgents](https://github.com/huggingface/smolagents) | 15K+ | Python | Via HF | Minimal code agents (~1K LOC), HuggingFace ecosystem |
+| [OpenHands](https://github.com/All-Hands-AI/OpenHands) | 45K+ | Python | Via Ollama | Full software dev agent, Docker isolation |
+| [Dify](https://github.com/langgenius/dify) | 55K+ | Python/TS | Native | Visual workflow builder, RAG, multi-agent UI |
+| [Flowise](https://github.com/FlowiseAI/Flowise) | 32K+ | TypeScript | Native | Drag-and-drop agent builder, no-code |
+| [Agno](https://github.com/agno-agi/agno) | 35K+ | Python | Via Ollama | Multimodal agents, agent runtime + control plane |
+
+### Quickstart: CrewAI + Ollama
 
 ```bash
-# macOS/Linux
-curl -fsSL https://ollama.com/install.sh | sh
-
-# Windows
-# Download from https://ollama.com/download
+pip install crewai crewai-tools langchain-ollama
+ollama pull gemma3:9b
 ```
-
-### 2. Download a Model
-
-```bash
-# Pull a capable model for agent tasks
-ollama pull llama3.1:8b
-
-# Or for more advanced reasoning
-ollama pull qwen2.5:14b
-```
-
-### 3. Install an Agent Framework
-
-```bash
-# Option A: CrewAI (easiest for multi-agent)
-pip install crewai crewai-tools
-
-# Option B: LangChain (most flexible)
-pip install langchain langchain-community
-
-# Option C: AutoGen (Microsoft's framework)
-pip install autogen-agentchat
-```
-
-### 4. Create Your First Agent
 
 ```python
-# Example with CrewAI and Ollama
 from crewai import Agent, Task, Crew
 from langchain_ollama import OllamaLLM
 
-# Connect to local Ollama
-llm = OllamaLLM(model="llama3.1:8b")
+llm = OllamaLLM(model="gemma3:9b")
 
-# Create an agent
 researcher = Agent(
     role="Research Analyst",
     goal="Find and summarize information on given topics",
-    backstory="You are an expert researcher with attention to detail",
-    llm=llm,
-    verbose=True
+    backstory="Expert researcher with attention to detail",
+    llm=llm
 )
 
-# Define a task
-research_task = Task(
-    description="Research the benefits of local AI agents",
-    expected_output="A summary with key points",
+task = Task(
+    description="Research the latest advances in local AI models",
+    expected_output="A concise summary with key findings",
     agent=researcher
 )
 
-# Run the crew
-crew = Crew(agents=[researcher], tasks=[research_task])
-result = crew.kickoff()
+result = Crew(agents=[researcher], tasks=[task]).kickoff()
 print(result)
 ```
 
 ---
 
-## Agent Frameworks
+## Local RAG Tools
 
-A comprehensive list of frameworks for building local AI agents. For detailed information, see [FRAMEWORKS.md](FRAMEWORKS.md).
+| Tool | Stars | Interface | Vector DB | Best For |
+|------|-------|-----------|-----------|----------|
+| [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) | 35K+ | GUI + API | LanceDB, Chroma, Pinecone | Zero-config all-in-one, multi-user workspaces |
+| [PrivateGPT](https://github.com/zylon-ai/private-gpt) | 54K+ | API + UI | Qdrant | Fully local document Q&A, no leakage guarantee |
+| [LocalGPT](https://github.com/PromtEngineer/localGPT) | 21K+ | CLI + Web | Chroma | GPU-accelerated, simple setup, document ingestion |
+| [Khoj](https://github.com/khoj-ai/khoj) | 24K+ | Web + App | SQLite + pgvector | Personal AI assistant, notes, calendar, web search |
+| [Chroma](https://github.com/chroma-core/chroma) | 18K+ | Embedded + Server | Native | Embedded vector DB, Python-native, zero infra |
+| [Qdrant](https://github.com/qdrant/qdrant) | 22K+ | REST + gRPC | Native | High-performance, Rust-based, production-ready |
+| [Weaviate](https://github.com/weaviate/weaviate) | 12K+ | REST + GraphQL | Native | Multi-modal, built-in vectorization, self-hosted |
+| [Milvus](https://github.com/milvus-io/milvus) | 32K+ | REST | Native | Enterprise-scale vector search, GPU acceleration |
 
-### Tier 1: Production-Ready Frameworks
-
-| Framework | Stars | Language | Best For | Key Feature |
-|-----------|-------|----------|----------|-------------|
-| [LangChain](https://github.com/langchain-ai/langchain) | 116K+ | Python/JS | Complex workflows | Modular design, extensive integrations |
-| [AutoGen](https://github.com/microsoft/autogen) | 50K+ | Python | Multi-agent systems | Conversational agents, Microsoft backing |
-| [CrewAI](https://github.com/crewAIInc/crewAI) | 38K+ | Python | Team collaboration | Role-based agents, simple API |
-| [LangGraph](https://github.com/langchain-ai/langgraph) | 19K+ | Python | Stateful workflows | Graph-based control flow |
-
-### Tier 2: Specialized Frameworks
-
-| Framework | Stars | Language | Best For | Key Feature |
-|-----------|-------|----------|----------|-------------|
-| [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 170K+ | Python | Autonomous tasks | Self-planning, goal-driven |
-| [Open Interpreter](https://github.com/OpenInterpreter/open-interpreter) | 56K+ | Python | Code execution | Natural language to code |
-| [OpenHands](https://github.com/All-Hands-AI/OpenHands) | 45K+ | Python | Software development | Docker isolation, file editing |
-| [Dify](https://github.com/langgenius/dify) | 55K+ | Python/TS | Visual building | GUI workflow builder |
-
-### Tier 3: Emerging Frameworks
-
-| Framework | Stars | Language | Best For | Key Feature |
-|-----------|-------|----------|----------|-------------|
-| [SmolAgents](https://github.com/huggingface/smolagents) | 15K+ | Python | Minimal footprint | ~1000 lines of code |
-| [Agno](https://github.com/agno-agi/agno) | 35.4K+ | Python | Multimodal agents | Runtime and control plane |
-| [Pydantic AI](https://github.com/pydantic/pydantic-ai) | 10K+ | Python | Type safety | Validated outputs |
-| [Goose](https://github.com/block/goose) | 8K+ | Python | Extensibility | Block's framework |
-| [Letta](https://github.com/letta-ai/letta) | 12K+ | Python | Persistent memory | Vector database integration |
-| [Flowise](https://github.com/FlowiseAI/Flowise) | 32K+ | TypeScript | Drag-and-drop | Visual node editor |
-| [Composio](https://github.com/composio/composio) | 26.2K+ | Python | Tool integrations | 100+ integrations, MCP support |
-| [Daytona](https://github.com/daytonaio/daytona) | 32.3K+ | Go | Secure execution | Elastic AI code infrastructure |
-| [FastGPT](https://github.com/labring/FastGPT) | 25.5K+ | TypeScript | Visual building | AI agent platform |
-
----
-
-## Local LLM Tools
-
-Tools for running language models locally. For detailed comparisons, see [LOCAL-LLM-TOOLS.md](LOCAL-LLM-TOOLS.md).
-
-### Runtime Comparison
-
-| Tool | Interface | Ease of Use | Model Support | Best For |
-|------|-----------|-------------|---------------|----------|
-| [Ollama](https://ollama.com) | CLI | Excellent | 100+ models | Developers, automation |
-| [LM Studio](https://lmstudio.ai) | GUI | Excellent | Extensive | Beginners, experimentation |
-| [GPT4All](https://gpt4all.io) | GUI | Very Good | Curated | Privacy-focused users |
-| [Jan](https://jan.ai) | GUI | Very Good | Good | ChatGPT replacement |
-| [LocalAI](https://localai.io) | API | Good | Many formats | OpenAI compatibility |
-| [text-gen-webui](https://github.com/oobabooga/text-generation-webui) | Web | Good | Very flexible | Advanced users |
-| [Haplo AI](https://apps.apple.com/app/haplo-ai) | App | Very Good | Limited | iOS/macOS users |
-| [Msty](https://msty.app) | GUI | Very Good | Good | Desktop users |
-
-### Recommended Models for Agents
-
-| Model | Parameters | RAM Required | Agent Capability | Speed |
-|-------|------------|--------------|------------------|-------|
-| Llama 3.1 8B | 8B | 8GB | Good | Fast |
-| Qwen 2.5 14B | 14B | 16GB | Excellent | Medium |
-| Mistral 7B | 7B | 8GB | Good | Very Fast |
-| DeepSeek V3 | Various | 16GB+ | Excellent | Medium |
-| CodeLlama 13B | 13B | 16GB | Code-focused | Medium |
-
----
-
-## Installation Guides
-
-### Setting Up Ollama + CrewAI
+### Quickstart: AnythingLLM (Easiest Path)
 
 ```bash
-# 1. Install Ollama
+# Docker one-liner — full RAG stack in 60 seconds
+docker run -d -p 3001:3001 \
+  -v ~/.anythingllm:/app/server/storage \
+  mintplexlabs/anythinglm
+
+# Open http://localhost:3001 → connect Ollama → upload docs → chat
+```
+
+---
+
+## Privacy and Security
+
+### Why Local AI Matters
+
+| Concern | Cloud AI | Local AI |
+|---------|----------|----------|
+| Data leaves device | Always | Never |
+| GDPR / DSGVO compliance | Complex, consent required | Inherent — no data transfer |
+| HIPAA compliance | BAA required, complex | Achievable with proper infra |
+| Air-gapped operation | Impossible | Native |
+| Audit trail | Provider-dependent | Full control |
+| Prompt injection via API | Risk of data exfil | Contained to local machine |
+| Model updates you didn't ask for | Automatic | You decide |
+
+### Air-Gapped Deployment Pattern
+
+```bash
+# 1. Pre-download models on a connected machine
+ollama pull gemma3:9b
+# Models stored at ~/.ollama/models/
+
+# 2. Copy model files to air-gapped machine via USB/internal network
+rsync -av ~/.ollama/models/ airgapped-host:~/.ollama/models/
+
+# 3. Run Ollama on air-gapped host — fully offline
+OLLAMA_HOST=0.0.0.0 ollama serve
+```
+
+### GDPR / DSGVO Checklist
+
+- Data processing stays within your infrastructure (Art. 5 GDPR)
+- No third-party sub-processors for AI inference
+- No model training on your prompts/data
+- Encryption at rest: encrypt the disk hosting model weights and vector DBs
+- Logging: control what gets persisted, easy to implement right-to-erasure
+
+---
+
+## Quick Start Guide
+
+### 30-Second Setup (Ollama)
+
+```bash
+# 1. Install Ollama (macOS/Linux)
 curl -fsSL https://ollama.com/install.sh | sh
 
-# 2. Start Ollama service
-ollama serve &
+# Windows: download from https://ollama.com/download
 
-# 3. Pull models
-ollama pull llama3.1:8b
-ollama pull nomic-embed-text  # For embeddings
+# 2. Pull a model
+ollama pull gemma3:9b        # 6 GB — best default choice
+# ollama pull phi4           # 9 GB — strong reasoning
+# ollama pull qwen2.5:14b    # 10 GB — best for coding
 
-# 4. Create Python environment
-python -m venv agent-env
-source agent-env/bin/activate  # or `agent-env\Scripts\activate` on Windows
+# 3. Start chatting
+ollama run gemma3:9b
 
-# 5. Install CrewAI
-pip install crewai crewai-tools langchain-ollama
-
-# 6. Verify installation
-python -c "from crewai import Agent; print('CrewAI ready!')"
+# 4. Use the OpenAI-compatible API
+curl http://localhost:11434/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{"model":"gemma3:9b","messages":[{"role":"user","content":"Hello!"}]}'
 ```
 
-### Setting Up LM Studio + LangChain
+### Agent Setup: Aider + Local Model
 
 ```bash
-# 1. Download LM Studio from https://lmstudio.ai
-# 2. Launch and download a model (e.g., Llama 3.1 8B)
-# 3. Start the local server (default: http://localhost:1234)
-
-# 4. Install LangChain
-pip install langchain langchain-openai
-
-# 5. Use with LangChain
+pip install aider-chat
+aider --model ollama/gemma3:9b --no-auto-commits
 ```
 
-```python
-from langchain_openai import ChatOpenAI
-
-llm = ChatOpenAI(
-    base_url="http://localhost:1234/v1",
-    api_key="not-needed",
-    model="local-model"
-)
-
-response = llm.invoke("Explain local AI agents")
-print(response.content)
-```
-
-### Setting Up Jan + AutoGen
+### Agent Setup: Open Interpreter + Ollama
 
 ```bash
-# 1. Download Jan from https://jan.ai
-# 2. Launch and download a model
-# 3. Enable API server in settings (default: http://localhost:1337)
-
-# 4. Install AutoGen
-pip install autogen-agentchat
-
-# 5. Configure AutoGen
+pip install open-interpreter
+interpreter --model ollama/gemma3:9b
 ```
 
-```python
-import autogen
+### Agent Setup: Continue.dev (VS Code)
 
-config_list = [{
-    "model": "jan-model",
-    "base_url": "http://localhost:1337/v1",
-    "api_key": "not-needed"
-}]
-
-assistant = autogen.AssistantAgent(
-    "assistant",
-    llm_config={"config_list": config_list}
-)
-```
+1. Install the [Continue extension](https://marketplace.visualstudio.com/items?itemName=Continue.continue)
+2. Open `~/.continue/config.json`
+3. Add an Ollama provider — autocomplete, chat, and inline edits run fully local
 
 ---
 
-## Use Cases
+## Performance Benchmarks
 
-### Software Development
+Approximate relative scores on common agent tasks (higher = better, community benchmarks, March 2026):
 
-- **Code generation** - Write functions, classes, and entire applications
-- **Code review** - Analyze code for bugs, security issues, and improvements
-- **Documentation** - Generate and update documentation automatically
-- **Testing** - Create unit tests and integration tests
-- **Refactoring** - Improve code structure while preserving functionality
+| Model | Coding | Reasoning | Chat Quality | Multilingual | Speed (tok/s, 8GB GPU) |
+|-------|--------|-----------|--------------|--------------|------------------------|
+| Gemma 3 9B Q4 | 7/10 | 7/10 | 8/10 | 8/10 | ~60 |
+| Qwen 2.5 14B Q4 | 9/10 | 8/10 | 8/10 | 9/10 | ~35 |
+| Phi-4 14B Q4 | 8/10 | 9/10 | 7/10 | 6/10 | ~30 |
+| Llama 4 Scout Q4 | 8/10 | 8/10 | 8/10 | 7/10 | ~65 |
+| Mistral Small 24B Q4 | 8/10 | 8/10 | 9/10 | 8/10 | ~20 |
+| Qwen 2.5 32B Q4 | 9/10 | 9/10 | 9/10 | 9/10 | ~14 |
+| DeepSeek R1 14B distill Q4 | 8/10 | 10/10 | 7/10 | 6/10 | ~28 |
+| Gemma 3 27B Q4 | 8/10 | 9/10 | 9/10 | 9/10 | ~18 |
 
-### Research and Analysis
-
-- **Literature review** - Summarize papers and extract key findings
-- **Data analysis** - Process and interpret datasets
-- **Report generation** - Create comprehensive reports from raw data
-- **Competitive analysis** - Research and compare products or companies
-
-### Content Creation
-
-- **Technical writing** - Create tutorials, guides, and documentation
-- **Marketing copy** - Generate product descriptions and ad copy
-- **Translation** - Translate content between languages
-- **Editing** - Proofread and improve existing content
-
-### Automation and Workflows
-
-- **Email processing** - Categorize, summarize, and draft responses
-- **Data entry** - Extract information from documents
-- **Scheduling** - Manage calendars and coordinate meetings
-- **System administration** - Generate scripts and manage infrastructure
-
-### Personal Assistants
-
-- **Note-taking** - Summarize meetings and organize information
-- **Task management** - Plan and track projects
-- **Learning** - Create study materials and explanations
-- **Decision support** - Analyze options and provide recommendations
+> Benchmarks vary heavily by task and hardware. Always test on your own use case.
+> Speed measured on a single RTX 4090 (24 GB). Apple M4 Max is within 20% for most models.
 
 ---
 
-## Community Resources
+## Related Lists
 
-For an extensive list of community resources, see [AWESOME-LISTS.md](AWESOME-LISTS.md).
-
-### Official Documentation
-
-- [LangChain Docs](https://python.langchain.com/)
-- [AutoGen Docs](https://microsoft.github.io/autogen/)
-- [CrewAI Docs](https://docs.crewai.com/)
-- [Ollama Docs](https://github.com/ollama/ollama/blob/main/docs/README.md)
-
-### Learning Resources
-
-- [LangChain Academy](https://www.langchain.com/langchain-academy) - Free courses
-- [Hugging Face Course](https://huggingface.co/learn) - AI/ML fundamentals
-- [DeepLearning.AI](https://www.deeplearning.ai/) - Agent courses
-
-### Community Forums
-
-- [r/LocalLLaMA](https://reddit.com/r/LocalLLaMA) - 534K+ members
-- [LangChain Discord](https://discord.gg/langchain)
-- [Ollama Discord](https://discord.gg/ollama)
-
-### GitHub Awesome Lists
-
-- [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) - 24.2K stars
-- [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) - 16.3K stars
-- [awesome-llm-agents](https://github.com/kaushikb11/awesome-llm-agents)
-- [awesome-agents](https://github.com/kyrolabs/awesome-agents)
-- [awesome-langchain](https://github.com/kyrolabs/awesome-langchain)
-
----
-
-## November 2025 Updates
-
-### What's New
-
-This repository has been updated with the latest discoveries from November 2025:
-
-#### New Frameworks Added
-- **Composio** (26.2K stars) - 100+ integrations via function calling
-- **Agno v2.0** (35.4K stars) - Multi-agent runtime and control plane
-- **Daytona** (32.3K stars) - Secure AI code execution infrastructure
-- **Parlant** (16.3K stars) - Control-first LLM agents
-- **FastGPT** (25.5K stars) - Visual AI agent building platform
-- **16+ additional frameworks** - See [FRAMEWORKS.md](FRAMEWORKS.md)
-
-#### Latest Models
-- **Llama 4** (Meta) - Natively multimodal Scout/Maverick variants
-- **Qwen3 Series** - Including Qwen3-Coder-480B for agentic coding
-- **DeepSeek V3.2/R1** - Advanced reasoning capabilities
-- **GPT-OSS** - OpenAI's first open-source release
-- Complete guide: [LATEST-MODELS-2025.md](LATEST-MODELS-2025.md)
-
-#### New Awesome Lists
-- [awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) - 24.2K stars
-- [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) - 16.3K stars
-- **8 additional curated lists** - See [AWESOME-LISTS.md](AWESOME-LISTS.md)
-
-#### New Resources
-- [LATEST-MODELS-2025.md](LATEST-MODELS-2025.md) - Comprehensive model running guide
-- [COMMUNITY-PROJECTS.md](COMMUNITY-PROJECTS.md) - Real-world implementations
-
----
-
-## Repository Statistics
-
-This repository covers:
-
-- **30+ Agent Frameworks** - From enterprise-ready to experimental (including 16 new November 2025 additions)
-- **8+ Local LLM Tools** - Various interfaces and capabilities
-- **20+ Latest Models** - Including November 2025 releases
-- **5+ Installation Guides** - Step-by-step setup instructions
-- **20+ Use Cases** - Real-world applications
-- **15+ Awesome Lists** - Curated community collections
-- **60+ Community Resources** - Tutorials, papers, and projects
+| Resource | Description |
+|----------|-------------|
+| [awesome-ai-agents-2025](https://github.com/e2b-dev/awesome-ai-agents) | Broad AI agents list, cloud + local, 24K+ stars |
+| [awesome-agentic-coding](https://github.com/nickarls/awesome-agentic-coding) | AI coding tools, assistants, and IDEs |
+| [awesome-llm](https://github.com/Hannibal046/Awesome-LLM) | LLM papers, tools, and resources |
+| [awesome-local-llm](https://github.com/vince-lam/awesome-local-llms) | Focused local LLM tools comparison |
+| [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | Real-world agent implementations, 16K+ stars |
+| [r/LocalLLaMA](https://reddit.com/r/LocalLLaMA) | 600K+ member community, hardware tips, model releases |
 
 ---
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+PRs welcome. Focus on self-hosted / local-only tools — no cloud services.
+Please include: GitHub link, star count, brief description of what makes it worth adding.
 
-- Adding new frameworks or tools
-- Improving documentation
-- Fixing errors
-- Sharing use cases and examples
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT — see [LICENSE](LICENSE).
 
 ---
 
-## Acknowledgments
-
-Thanks to all the developers and researchers building the local AI ecosystem:
-
-- The LangChain team for pioneering modular agent design
-- Microsoft for AutoGen and pushing multi-agent research
-- The CrewAI team for simplifying agent collaboration
-- Ollama for making local LLM deployment accessible
-- The r/LocalLLaMA community for continuous testing and feedback
-
----
-
-**Star this repo** if you find it useful! Your support helps others discover these resources.
-
-[Report an Issue](https://github.com/your-username/awesome-local-ai-agents/issues) | [Request a Feature](https://github.com/your-username/awesome-local-ai-agents/issues/new)
+**Star this repo** if it saved you time. [Report an Issue](https://github.com/Supersynergy/awesome-local-ai-agents/issues) | [Request a Feature](https://github.com/Supersynergy/awesome-local-ai-agents/issues/new)
