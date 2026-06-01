@@ -1,3 +1,31 @@
+<!-- REPO-POLISH:START -->
+<p align="center">
+  <img src="docs/assets/social-preview.png" alt="Repo social preview" width="100%">
+</p>
+
+> Awesome Local Ai Agents is a curated developer index for finding high-leverage AI tools fast.
+
+## Quick Start
+
+```bash
+git clone https://github.com/Supersynergy/awesome-local-ai-agents
+cd awesome-local-ai-agents
+git status --short
+```
+
+Expected result: the project runs locally or reports the next missing prerequisite directly in the terminal.
+
+## Developer Map
+
+| Need | Command |
+|---|---|
+| inspect | `git status --short` |
+
+Full verification path: `git status --short`
+
+Agent instructions live in [AGENTS.md](AGENTS.md).
+<!-- REPO-POLISH:END -->
+
 # Awesome Local AI Agents — March 2026 Edition
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
