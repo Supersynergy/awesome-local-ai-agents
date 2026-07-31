@@ -6,6 +6,9 @@
 
 > Complete guide to local AI agents, models, and tools — self-hosted only, no cloud required.
 > Privacy-first. Air-gap compatible. Your data stays yours.
+>
+> Curated March 2026. Links and repository status re-checked on 31 July 2026;
+> the model comparison below still carries its March numbers.
 
 ## Table of Contents
 
@@ -34,7 +37,7 @@
 | [GPT4All](https://gpt4all.io) | 72K+ | Mac/Win/Linux | GUI + CLI | Runs on CPU only, no GPU required |
 | [LocalAI](https://localai.io) | 28K+ | All (Docker) | REST | Drop-in OpenAI API, multimodal, TTS, image gen |
 | [koboldcpp](https://github.com/LostRuins/koboldcpp) | 10K+ | All | Web UI | KoboldAI backend, great for creative/roleplay tasks |
-| [text-generation-webui](https://github.com/oobabooga/text-generation-webui) | 43K+ | All | Web UI | Advanced params, extensions ecosystem, multiple backends |
+| [text-generation-webui](https://github.com/oobabooga/textgen) | 43K+ | All | Web UI | Advanced params, extensions ecosystem, multiple backends |
 
 ---
 
@@ -124,11 +127,11 @@
 | [LangGraph](https://github.com/langchain-ai/langgraph) | 19K+ | Python | Via LangChain | Stateful workflows, cyclical graphs, human-in-the-loop |
 | [AutoGen](https://github.com/microsoft/autogen) | 50K+ | Python | Via OpenAI-compat | Conversational multi-agent, Microsoft research |
 | [AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) | 35K+ | TypeScript | Native | All-in-one: RAG + agents + chat UI, zero-config |
-| [Open Interpreter](https://github.com/OpenInterpreter/open-interpreter) | 56K+ | Python | Native | Natural language computer control, code execution |
-| [Aider](https://github.com/paul-gauthier/aider) | 26K+ | Python | Via Ollama | AI pair programmer, git-aware, multi-file edits |
+| [Open Interpreter](https://github.com/openinterpreter/openinterpreter) | 56K+ | Python | Native | Natural language computer control, code execution |
+| [Aider](https://github.com/Aider-AI/aider) | 26K+ | Python | Via Ollama | AI pair programmer, git-aware, multi-file edits |
 | [Continue.dev](https://github.com/continuedev/continue) | 22K+ | TypeScript | Native | VS Code/JetBrains AI IDE extension, local first |
 | [SmolAgents](https://github.com/huggingface/smolagents) | 15K+ | Python | Via HF | Minimal code agents (~1K LOC), HuggingFace ecosystem |
-| [OpenHands](https://github.com/All-Hands-AI/OpenHands) | 45K+ | Python | Via Ollama | Full software dev agent, Docker isolation |
+| [OpenHands](https://github.com/OpenHands/OpenHands) | 45K+ | Python | Via Ollama | Full software dev agent, Docker isolation |
 | [Dify](https://github.com/langgenius/dify) | 55K+ | Python/TS | Native | Visual workflow builder, RAG, multi-agent UI |
 | [Flowise](https://github.com/FlowiseAI/Flowise) | 32K+ | TypeScript | Native | Drag-and-drop agent builder, no-code |
 | [Agno](https://github.com/agno-agi/agno) | 35K+ | Python | Via Ollama | Multimodal agents, agent runtime + control plane |
@@ -300,7 +303,6 @@ Approximate relative scores on common agent tasks (higher = better, community be
 | Resource | Description |
 |----------|-------------|
 | [awesome-ai-agents-2025](https://github.com/e2b-dev/awesome-ai-agents) | Broad AI agents list, cloud + local, 24K+ stars |
-| [awesome-agentic-coding](https://github.com/nickarls/awesome-agentic-coding) | AI coding tools, assistants, and IDEs |
 | [awesome-llm](https://github.com/Hannibal046/Awesome-LLM) | LLM papers, tools, and resources |
 | [awesome-local-llm](https://github.com/vince-lam/awesome-local-llms) | Focused local LLM tools comparison |
 | [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | Real-world agent implementations, 16K+ stars |
