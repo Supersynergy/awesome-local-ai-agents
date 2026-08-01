@@ -13,6 +13,7 @@
 ## Table of Contents
 
 - [Local LLM Runners](#local-llm-runners)
+- [Local Agent Applications](#local-agent-applications)
 - [Best Local Models (March 2026)](#best-local-models-march-2026)
 - [Hardware Requirements](#hardware-requirements)
 - [Quantization Guide](#quantization-guide)
@@ -38,6 +39,54 @@
 | [LocalAI](https://localai.io) | 28K+ | All (Docker) | REST | Drop-in OpenAI API, multimodal, TTS, image gen |
 | [koboldcpp](https://github.com/LostRuins/koboldcpp) | 10K+ | All | Web UI | KoboldAI backend, great for creative/roleplay tasks |
 | [text-generation-webui](https://github.com/oobabooga/textgen) | 43K+ | All | Web UI | Advanced params, extensions ecosystem, multiple backends |
+
+---
+
+## Local Agent Applications
+
+### Orkas
+
+**Open-source, local-first desktop AI workforce for coordinating specialist and external CLI agents through one chat**
+
+- **Website**: [orkas.ai](https://orkas.ai/?source=gh_localaiagents)
+- **GitHub**: [Orkas-AI/Orkas](https://github.com/Orkas-AI/Orkas)
+- **License**: MIT
+- **Platforms**: macOS, Windows, Linux
+
+#### Overview
+
+Orkas runs the orchestration layer on the user's machine: a Commander plans work and coordinates built-in specialists plus external CLI coding agents. Conversations, files, agent configuration, and model credentials are stored locally; model requests go directly to the configured provider, or to a local model endpoint for operation without cloud services.
+
+#### Key Features
+
+- Commander-led planning and multi-agent coordination
+- External Claude Code, Codex, OpenCode, and Cline subprocess support
+- Local storage for conversations, files, agent configuration, and model credentials
+- Compatible with provider APIs or local model endpoints
+
+#### Strengths
+
+- Desktop interface for multi-agent work rather than a code-only framework
+- Local-first persistence with direct provider connections
+- Can run without cloud services when configured with a local model endpoint
+
+#### Limitations
+
+- Orkas is an orchestration application, not a local language model
+- Provider-backed models still require network access; fully offline use requires a local endpoint
+- Packaged installers currently target macOS and Windows; Linux runs from source
+
+#### Installation
+
+Requires Node.js 20+ and Python 3 when running from source:
+
+```bash
+git clone https://github.com/Orkas-AI/Orkas.git
+cd Orkas
+./run.sh
+```
+
+Windows users can run `run.cmd` instead.
 
 ---
 
