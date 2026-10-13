@@ -590,6 +590,7 @@ Brief description of what it does.
 
 ## Resources
 
+- [ALEPH local Ollama source walkthrough](https://github.com/josuecuguy1307/Aleph/blob/20a7c95515f29a51374ce1883c26ffce944be2aa/examples/ollama-local/README.md) - Reproduce an assembler-driven `qwen3:8b` calculator task, measured model identity, and a saved report without fallback; includes setup, recipe and evidence checks. This covers the source workflow, with desktop UI and packaged-app behavior still unverified.
 - [r/LocalLLaMA](https://reddit.com/r/LocalLLaMA) - Community discussions
 - [Hugging Face Spaces](https://huggingface.co/spaces) - Demo projects
 - [GitHub Topics: AI Agents](https://github.com/topics/ai-agents)
