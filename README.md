@@ -1,5 +1,9 @@
 # Awesome Local AI Agents — March 2026 Edition
 
+![Awesome Local AI Agents](assets/cover.png)
+
+**🧭 Explore:** [Runners](#local-llm-runners) · [Models](#best-local-models-march-2026) · [Hardware](#hardware-requirements) · [Frameworks](#local-agent-frameworks) · [Quick start](#quick-start-guide)
+
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
