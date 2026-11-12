@@ -309,7 +309,7 @@ Found a great resource that should be included? Please:
 3. Verify the link works
 4. Open a PR with your addition
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+See [CONTRIBUTING.md](../.github/CONTRIBUTING.md) for guidelines.
 
 ---
 

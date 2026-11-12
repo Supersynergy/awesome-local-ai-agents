@@ -1,12 +1,12 @@
 # Awesome Local AI Agents — March 2026 Edition
 
-![Awesome Local AI Agents](assets/cover.png)
+<img src="assets/cover.png" alt="Awesome Local AI Agents" width="300" align="right">
 
 **🧭 Explore:** [Runners](#local-llm-runners) · [Models](#best-local-models-march-2026) · [Hardware](#hardware-requirements) · [Frameworks](#local-agent-frameworks) · [Quick start](#quick-start-guide)
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
 
 > Complete guide to local AI agents, models, and tools — self-hosted only, no cloud required.
 > Privacy-first. Air-gap compatible. Your data stays yours.
@@ -548,7 +548,7 @@ Approximate relative scores on common agent tasks (higher = better, community be
 PRs welcome. Focus on self-hosted / local-only tools — no cloud services.
 Please include: GitHub link, star count, brief description of what makes it worth adding.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for full guidelines.
 
 ## License
 
