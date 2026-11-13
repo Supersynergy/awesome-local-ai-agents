@@ -1,6 +1,9 @@
+<p align="center">
+  <img src="assets/cover.png" alt="Awesome Local AI Agents" width="960">
+</p>
+
 # Awesome Local AI Agents — March 2026 Edition
 
-<img src="assets/cover.png" alt="Awesome Local AI Agents" width="300" align="right">
 
 **🧭 Explore:** [Runners](#local-llm-runners) · [Models](#best-local-models-march-2026) · [Hardware](#hardware-requirements) · [Frameworks](#local-agent-frameworks) · [Quick start](#quick-start-guide)
 
